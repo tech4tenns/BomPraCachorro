@@ -1,0 +1,374 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f3f5ff;
+    color: #333;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+    background: linear-gradient(135deg, #6c63ff, #918aff);
+    color: white;
+    padding: 25px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cabecalho h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* Navegador personalizado */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 22px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: white;
+    color: #554bd9;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.menu a.ativo {
+    background: white;
+    color: #554bd9;
+}
+
+/* Conteúdo */
+
+.conteudo {
+    width: 90%;
+    max-width: 900px;
+    margin: 35px auto;
+}
+
+.conteudo > h2 {
+    text-align: center;
+    color: #554bd9;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Cards */
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+.card h3 {
+    color: #554bd9;
+    margin-bottom: 18px;
+}
+
+/* Formulários */
+
+.container {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"],
+input[type="url"] {
+    padding: 13px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+input[type="text"] {
+    flex: 1;
+}
+
+input:focus {
+    outline: none;
+    border-color: #6c63ff;
+}
+
+/* Botões */
+
+button {
+    border: none;
+    border-radius: 12px;
+    padding: 13px 20px;
+    background: #6c63ff;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5148d9;
+    transform: translateY(-2px);
+}
+
+/* Histórico */
+
+#listaHistorico {
+    list-style: none;
+}
+
+.historico {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background: #f5f4ff;
+    border-left: 5px solid #6c63ff;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 0 12px 12px 0;
+}
+
+.historico-info {
+    flex: 1;
+}
+
+.historico-info strong {
+    color: #554bd9;
+}
+
+.historico-concluido {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.botao-concluir {
+    background: #55b96b;
+    padding: 8px 12px;
+}
+
+.botao-excluir {
+    background: #ff5c5c;
+    padding: 8px 12px;
+}
+
+.botao-remover {
+    background: #ff5c5c;
+    margin-top: 15px;
+}
+
+/* Papel de parede */
+
+.papel {
+    text-align: left;
+}
+
+.papel p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.papel input[type="file"] {
+    display: block;
+    margin-top: 15px;
+}
+
+/* Perfil do cachorro */
+
+.perfil-cachorro {
+    text-align: center;
+}
+
+.perfil-cachorro img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #6c63ff;
+    margin-bottom: 15px;
+}
+
+.perfil-cachorro h2 {
+    color: #554bd9;
+    margin-bottom: 8px;
+}
+
+.perfil-cachorro p {
+    color: #666;
+    margin: 5px;
+}
+
+/* Rodapé */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+/* Celular */
+
+@media (max-width: 650px) {
+
+    .cabecalho h1 {
+        font-size: 26px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .historico {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .historico button {
+        width: 100%;
+    }
+
+    .perfil-cachorro img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Menu de três pontinhos */
+
+.header {
+    position: relative;
+}
+
+.menu-pontos {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 1000;
+}
+
+.botao-pontos {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+    color: #554bd9;
+
+    border: 2px solid #e5e2ff;
+    border-radius: 50%;
+
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+.botao-pontos:hover {
+    background: #6c63ff;
+    color: white;
+    transform: scale(1.08);
+}
+
+/* Opções do menu */
+
+.opcoes-menu {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 0;
+
+    min-width: 200px;
+
+    background: white;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.opcoes-menu.aberto {
+    display: block;
+}
+
+.opcoes-menu a {
+    display: block;
+    padding: 15px;
+
+    color: #554bd9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.opcoes-menu a:hover {
+    background: #f3f1ff;
+}
+
+@media (max-width: 600px) {
+    .menu-pontos {
+        top: 12px;
+        right: 12px;
+    }
+
+    .botao-pontos {
+        width: 42px;
+        height: 42px;
+        font-size: 28px;
+    }
+}
+
+

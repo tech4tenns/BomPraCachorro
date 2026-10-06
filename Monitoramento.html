@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCheck - Acompanhamento do Cachorro</title>
+    <link rel="stylesheet" href="monitoramento.css">
+</head>
+
+<body>
+  <div class="menu-pontos">
+
+    <button class="botao-pontos" onclick="abrirMenu()">
+        ⋮
+    </button>
+
+    <div class="opcoes-menu" id="opcoesMenu">
+
+        <a href="monitoramento.html">
+            🐾 Cuidado
+        </a>
+        <a href="index Dia a dia.html">
+            📅 Dia a Dia
+        </a>
+
+    </div>
+
+</div>
+
+    <main class="container">
+
+        <header class="header">
+            <div class="logo">🐶 PetCheck</div>
+            <p>Acompanhe a rotina e o bem-estar do seu cachorro</p>
+        </header>
+
+        <section id="quiz-container">
+
+            <div class="progress-area">
+                <div class="progress-info">
+                    <span id="categoria">Informações</span>
+                    <span id="contador">1 / 30</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+
+            <div class="quiz-card">
+
+                <h1 id="pergunta"></h1>
+
+                <div id="opcoes"></div>
+
+                <button id="proximo" class="btn">
+                    Próxima
+                </button>
+
+            </div>
+
+        </section>
+
+        <section id="resultado" class="resultado escondido">
+
+            <div class="resultado-icon">🐾</div>
+
+            <h1>Resultado do acompanhamento</h1>
+
+            <p id="mensagem-final"></p>
+
+            <div class="pontuacao">
+                <span>Nível de atenção</span>
+                <strong id="pontuacao"></strong>
+            </div>
+
+            <div id="categorias-resultado"></div>
+
+            <div class="aviso">
+                <strong>Importante:</strong>
+                este resultado serve apenas para acompanhar mudanças
+                na rotina do seu cachorro. Ele não substitui uma avaliação
+                feita por um veterinário.
+            </div>
+
+            <button onclick="reiniciarQuiz()" class="btn">
+                Fazer novamente
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="monitoramento.js"></script>
+
+</body>
+</html>

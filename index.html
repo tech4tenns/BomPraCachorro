@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Pet 🐶</title>
+
+    <link rel="stylesheet" href="cuidado.css">
+</head>
+
+<body>
+<div class="menu-pontos">
+
+    <button class="botao-pontos" onclick="abrirMenu()">
+        ⋮
+    </button>
+
+    <div class="opcoes-menu" id="opcoesMenu">
+
+        <a href="monitoramento.html">
+            📊 Monitoramento
+        </a>
+        <a href="index Dia a dia.html">
+            📅 Dia a Dia
+        </a>
+
+    </div>
+
+</div>
+
+
+    <header>
+        <h1>🐶 Meu Pet</h1>
+        <p>Crie o histórico do seu melhor amigo!</p>
+    </header>
+
+    <main>
+
+        <!-- Cadastro -->
+        <section class="card">
+            <h2>🐾 Cadastrar cachorro</h2>
+
+            <form id="formCachorro">
+
+                <label>Nome</label>
+                <input type="text" id="nome" placeholder="Ex: Kant" required>
+
+                <label>Raça</label>
+                <input type="text" id="raca" placeholder="Ex: Golden Retriever" required>
+
+                <label>Data de nascimento</label>
+                <input type="date" id="nascimento" required>
+
+                <label>Foto</label>
+                <input type="file" id="foto" accept="image/*">
+
+                <button type="submit">Salvar cachorro 🐶</button>
+
+            </form>
+        </section>
+
+
+        <!-- Perfil -->
+        <section class="card perfil" id="perfil" hidden>
+
+            <img id="fotoCachorro" src="" alt="Foto do cachorro">
+
+            <div>
+                <h2 id="nomeCachorro"></h2>
+
+                <p><strong>🐕 Raça:</strong>
+                    <span id="racaCachorro"></span>
+                </p>
+
+                <p><strong>🎂 Nascimento:</strong>
+                    <span id="nascimentoCachorro"></span>
+                </p>
+
+                <p><strong>📅 Idade:</strong>
+                    <span id="idadeCachorro"></span>
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Adicionar histórico -->
+        <section class="card" id="areaHistorico" hidden>
+
+            <h2>➕ Adicionar acontecimento</h2>
+
+            <form id="formEvento">
+
+                <label>Data</label>
+                <input type="date" id="dataEvento" required>
+
+                <label>Tipo</label>
+
+                <select id="tipoEvento" required>
+                    <option value="">Escolha</option>
+                    <option>💉 Vacinação</option>
+                    <option>🩺 Consulta veterinária</option>
+                    <option>🎾 Passeio</option>
+                    <option>🍖 Alimentação</option>
+                    <option>🎂 Aniversário</option>
+                    <option>🐾 Outro</option>
+                </select>
+
+                <label>Descrição</label>
+
+                <textarea
+                    id="descricaoEvento"
+                    placeholder="Conte o que aconteceu..."
+                    required>
+                </textarea>
+
+                <button type="submit">
+                    Adicionar ao histórico
+                </button>
+
+            </form>
+        </section>
+
+
+        <!-- Histórico -->
+        <section class="card" id="historico" hidden>
+
+            <h2>📖 Histórico do cachorro</h2>
+
+            <div id="listaHistorico"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Feito com ❤️ para os amantes de pets
+    </footer>
+
+    <script src="cuidado.js"></script>
+
+</body>
+</html>
+```

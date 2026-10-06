@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BomPraCachorro - Dia a Dia</title>
+
+    <link rel="stylesheet" href="diaadia.css">
+    <link rel="shortcut icon" href="animals.png" type="image/x-icon">
+</head>
+
+<body>
+<main>
+
+    <div class="menu-pontos">
+
+    <button class="botao-pontos" onclick="abrirMenu()">
+        ⋮
+    </button>
+
+    <div class="opcoes-menu" id="opcoesMenu">
+
+        <a href="monitoramento.html">
+              📊  Monitoramento
+        </a>
+        <a href="index Dia a dia.html">
+             🐾 Cuidado
+        </a>
+
+    </div>
+
+</div>
+
+        <section class="conteudo">
+
+            <h2>📅 Meu Dia a Dia</h2>
+
+            <p class="descricao">
+                Organize as tarefas e atividades do seu cachorro.
+            </p>
+
+            <section class="card">
+
+                <h3>➕ Adicionar tarefa</h3>
+
+                <div class="container">
+
+                    <input
+                        type="text"
+                        id="tarefaInput"
+                        placeholder="Digite uma tarefa..."
+                    >
+
+                    <input
+                        type="time"
+                        id="horarioInput"
+                    >
+
+                    <button onclick="adicionar()">
+                        Adicionar
+                    </button>
+
+                </div>
+
+            </section>
+
+            <section class="card">
+
+                <h3>🐾 Minhas tarefas</h3>
+
+                <ul id="listaTarefa"></ul>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer>
+        🐾 BomPraCachorro — Feito com ❤️
+    </footer>
+
+    <script src="diaadia.js"></script>
+
+</body>
+</html>
+

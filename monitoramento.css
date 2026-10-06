@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f5ff;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background: linear-gradient(135deg, #6c63ff, #918aff);
+    color: white;
+    padding: 25px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cabecalho h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* NAVEGADOR */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 22px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: white;
+    color: #554bd9;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.menu a.ativo {
+    background: white;
+    color: #554bd9;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+/* CABEÇALHO DO QUIZ */
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #554bd9;
+}
+
+.header p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* PROGRESSO */
+
+.progress-area {
+    margin-bottom: 20px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    background: #6c63ff;
+    transition: 0.3s;
+}
+
+/* CARD */
+
+.quiz-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+.quiz-card h1 {
+    font-size: 25px;
+    margin-bottom: 25px;
+    line-height: 1.3;
+    color: #554bd9;
+}
+
+/* OPÇÕES */
+
+.opcao {
+    width: 100%;
+    padding: 17px;
+    margin-bottom: 12px;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    background: white;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.opcao:hover {
+    border-color: #6c63ff;
+    background: #f5f4ff;
+}
+
+.opcao.selecionada {
+    background: #6c63ff;
+    color: white;
+    border-color: #6c63ff;
+}
+
+/* BOTÃO */
+
+.btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #6c63ff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #5148d9;
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    background: #bbb;
+    cursor: not-allowed;
+}
+
+/* RESULTADO */
+
+.resultado {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+.resultado-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.resultado h1 {
+    margin-bottom: 15px;
+    color: #554bd9;
+}
+
+#mensagem-final {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.pontuacao {
+    padding: 20px;
+    background: #f5f4ff;
+    border-radius: 14px;
+    margin-bottom: 25px;
+}
+
+.pontuacao span {
+    display: block;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.pontuacao strong {
+    font-size: 25px;
+    color: #554bd9;
+}
+
+/* CATEGORIAS */
+
+.categoria-result {
+    text-align: left;
+    border: 1px solid #eee;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    background: #fafaff;
+}
+
+.categoria-result h3 {
+    margin-bottom: 8px;
+    color: #554bd9;
+}
+
+.categoria-result p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* AVISO */
+
+.aviso {
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 12px;
+    background: #f5f4ff;
+    color: #555;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.escondido {
+    display: none;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 600px) {
+
+    .cabecalho h1 {
+        font-size: 26px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        padding: 20px 12px;
+    }
+
+    .quiz-card {
+        padding: 25px 18px;
+    }
+
+    .quiz-card h1 {
+        font-size: 21px;
+    }
+
+    .resultado {
+        padding: 25px 18px;
+    }
+}
+
+
+/* Menu de três pontinhos */
+
+.header {
+    position: relative;
+}
+
+.menu-pontos {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 1000;
+}
+
+.botao-pontos {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+    color: #554bd9;
+
+    border: 2px solid #e5e2ff;
+    border-radius: 50%;
+
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+.botao-pontos:hover {
+    background: #6c63ff;
+    color: white;
+    transform: scale(1.08);
+}
+
+/* Opções do menu */
+
+.opcoes-menu {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 0;
+
+    min-width: 200px;
+
+    background: white;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.opcoes-menu.aberto {
+    display: block;
+}
+
+.opcoes-menu a {
+    display: block;
+    padding: 15px;
+
+    color: #554bd9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.opcoes-menu a:hover {
+    background: #f3f1ff;
+}
+
+@media (max-width: 600px) {
+    .menu-pontos {
+        top: 12px;
+        right: 12px;
+    }
+
+    .botao-pontos {
+        width: 42px;
+        height: 42px;
+        font-size: 28px;
+    }
+}
+
